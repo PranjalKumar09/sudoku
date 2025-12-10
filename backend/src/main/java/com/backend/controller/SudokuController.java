@@ -51,11 +51,16 @@ public class SudokuController {
     /* -------------------- DAILY -------------------- */
 
     @GetMapping("/daily")
-    public ResponseEntity<Map<String, Object>> daily() {
-        String difficulty = getDailyDifficulty();
+    public ResponseEntity<Map<String, Object>> daily(
+            @RequestParam(required = false) String date
+    ) {
+        LocalDate targetDate = (date == null)
+                ? LocalDate.now()
+                : LocalDate.parse(date);
 
+        long seed = targetDate.toEpochDay();
 
-        long seed = LocalDate.now().toEpochDay();
+        String difficulty = getDailyDifficulty(seed);
 
         int[][] solution = generator.generateFullBoard(seed);
         int[][] puzzle = generator.createPuzzleFromSolution(solution, difficulty);
@@ -72,13 +77,13 @@ public class SudokuController {
                 .build()
                 .create();
     }
-    private String getDailyDifficulty() {
-        long seed = LocalDate.now().toEpochDay();
-        Random random = new Random(seed);
 
+    private String getDailyDifficulty(long seed) {
+        Random random = new Random(seed);
         int index = random.nextInt(DIFFICULTIES.length);
         return DIFFICULTIES[index];
     }
+
 
 }
 
