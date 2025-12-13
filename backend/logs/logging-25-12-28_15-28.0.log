@@ -1,0 +1,81 @@
+2025-12-28 15:28:37.939 INFO  [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2025-12-28 15:28:37.945 INFO  [Thread-45] o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-28 15:28:37.946 INFO  [tomcat-shutdown] o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-12-28 15:28:37.947 INFO  [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-12-28 15:28:37.948 INFO  [Thread-45] o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-12-28 15:28:38.144 INFO  [restartedMain] com.backend.BackendApplication - Starting BackendApplication using Java 21.0.8 with PID 175326 (/mnt/NewVolume/code/sudoku/backend/target/classes started by pranjal in /mnt/NewVolume/code/sudoku/backend)
+2025-12-28 15:28:38.144 INFO  [restartedMain] com.backend.BackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-28 15:28:38.856 INFO  [restartedMain] o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-28 15:28:38.857 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-28 15:28:38.858 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-28 15:28:38.858 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2025-12-28 15:28:38.869 INFO  [restartedMain] o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 714 ms
+2025-12-28 15:28:38.971 INFO  [restartedMain] o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-12-28 15:28:39.162 INFO  [restartedMain] o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-12-28 15:28:39.182 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-12-28 15:28:39.186 INFO  [restartedMain] o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-12-28 15:28:39.191 INFO  [restartedMain] com.backend.BackendApplication - Started BackendApplication in 1.143 seconds (process running for 9019.231)
+2025-12-28 15:28:39.194 INFO  [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-12-28 15:28:40.618 INFO  [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (0 additions, 1 deletion, 1 modification)
+2025-12-28 15:28:40.622 INFO  [Thread-49] o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-28 15:28:40.624 INFO  [tomcat-shutdown] o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-12-28 15:28:40.630 INFO  [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-12-28 15:28:40.631 INFO  [Thread-49] o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-12-28 15:28:40.837 INFO  [restartedMain] com.backend.BackendApplication - Starting BackendApplication using Java 21.0.8 with PID 175326 (/mnt/NewVolume/code/sudoku/backend/target/classes started by pranjal in /mnt/NewVolume/code/sudoku/backend)
+2025-12-28 15:28:40.838 INFO  [restartedMain] com.backend.BackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-28 15:28:41.641 INFO  [restartedMain] o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-28 15:28:41.642 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-28 15:28:41.643 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-28 15:28:41.643 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2025-12-28 15:28:41.657 INFO  [restartedMain] o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 813 ms
+2025-12-28 15:28:41.747 INFO  [restartedMain] o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-12-28 15:28:41.902 INFO  [restartedMain] o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-12-28 15:28:41.918 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-12-28 15:28:41.922 INFO  [restartedMain] o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-12-28 15:28:41.928 INFO  [restartedMain] com.backend.BackendApplication - Started BackendApplication in 1.175 seconds (process running for 9021.967)
+2025-12-28 15:28:41.930 INFO  [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-12-28 15:28:50.495 INFO  [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-12-28 15:28:50.498 INFO  [Thread-53] o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-28 15:28:50.498 INFO  [tomcat-shutdown] o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-12-28 15:28:50.500 INFO  [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-12-28 15:28:50.500 INFO  [Thread-53] o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-12-28 15:28:50.659 INFO  [restartedMain] com.backend.BackendApplication - Starting BackendApplication using Java 21.0.8 with PID 175326 (/mnt/NewVolume/code/sudoku/backend/target/classes started by pranjal in /mnt/NewVolume/code/sudoku/backend)
+2025-12-28 15:28:50.659 INFO  [restartedMain] com.backend.BackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-28 15:28:51.377 INFO  [restartedMain] o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-28 15:28:51.378 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-28 15:28:51.379 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-28 15:28:51.379 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2025-12-28 15:28:51.389 INFO  [restartedMain] o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 725 ms
+2025-12-28 15:28:51.440 WARN  [restartedMain] o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sudokuGeneratorService' defined in file [/mnt/NewVolume/code/sudoku/backend/target/classes/com/backend/service/SudokuGeneratorService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.backend.service.SudokuSolverService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2025-12-28 15:28:51.441 INFO  [restartedMain] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-12-28 15:28:51.476 INFO  [restartedMain] o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-12-28 15:28:51.575 ERROR [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.backend.service.SudokuGeneratorService required a bean of type 'com.backend.service.SudokuSolverService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.backend.service.SudokuSolverService' in your configuration.
+
+2025-12-28 15:28:53.160 INFO  [restartedMain] com.backend.BackendApplication - Starting BackendApplication using Java 21.0.8 with PID 175326 (/mnt/NewVolume/code/sudoku/backend/target/classes started by pranjal in /mnt/NewVolume/code/sudoku/backend)
+2025-12-28 15:28:53.160 INFO  [restartedMain] com.backend.BackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-28 15:28:53.913 INFO  [restartedMain] o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-28 15:28:53.915 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-28 15:28:53.916 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-28 15:28:53.916 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2025-12-28 15:28:53.928 INFO  [restartedMain] o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 761 ms
+2025-12-28 15:28:54.025 INFO  [restartedMain] o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-12-28 15:28:54.175 INFO  [restartedMain] o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-12-28 15:28:54.205 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-12-28 15:28:54.207 INFO  [restartedMain] o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-12-28 15:28:54.211 INFO  [restartedMain] com.backend.BackendApplication - Started BackendApplication in 1.167 seconds (process running for 9034.251)
+2025-12-28 15:28:54.213 INFO  [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
