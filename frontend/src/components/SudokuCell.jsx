@@ -6,10 +6,13 @@ export default function SudokuCell({
   onSelect,
   invalid,
   notes,
-  isOriginal
+  isOriginal,
+  highlightSame
 }) {
   const isSelected =
     selected && selected.row === row && selected.col === col;
+
+  const noteSet = notes instanceof Set ? notes : new Set();
 
   const borders = `
     ${row % 3 === 0 ? "border-t-2" : "border-t"}
@@ -28,9 +31,13 @@ export default function SudokuCell({
         text-lg font-semibold
         border border-gray-700 ${borders}
         cursor-${isOriginal ? "default" : "pointer"}
-        ${isSelected ? "ring-2 ring-blue-500 ring-offset-0" : ""}
-        ${invalid ? "bg-red-300" : ""}
-        ${isOriginal ? "text-black bg-gray-200" : "text-blue-700 bg-white"}
+${isSelected ? "ring-2 ring-blue-600 bg-blue-300 text-white" : ""}
+        ${isOriginal ? "text-black" : "text-blue-700"}
+${invalid ? "bg-red-300" : ""}
+${highlightSame && !isSelected ? "bg-blue-100" : ""}
+${!highlightSame && !invalid && isOriginal ? "bg-gray-200" : ""}
+${!highlightSame && !invalid && !isOriginal ? "bg-white" : ""}
+
       `}
     >
       {/* Pencil Notes (always rendered) */}
@@ -48,7 +55,7 @@ export default function SudokuCell({
             key={n}
             className="flex items-center justify-center"
           >
-            {notes?.has(n) ? n : ""}
+            {noteSet.has(n) ? n : ""}
           </span>
         ))}
       </div>
