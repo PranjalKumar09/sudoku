@@ -9,8 +9,8 @@ export async function generateSudoku(difficulty = "easy") {
   return res.json();
 }
 
-
-export async function generateDailySudoku() {
-  const res = await fetch(`${BASE_URL}/daily`);
+export async function generateDailySudoku(date) {
+  const query = date ? `?date=${date}` : "";
+  const res = await fetch(`${BASE_URL}/daily${query}`);
   return res.json();
 }
