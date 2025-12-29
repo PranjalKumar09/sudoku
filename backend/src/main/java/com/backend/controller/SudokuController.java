@@ -52,7 +52,7 @@ public class SudokuController {
 
     @GetMapping("/daily")
     public ResponseEntity<Map<String, Object>> daily() {
-        String difficulty = getDailyDifficulty();   
+        String difficulty = getDailyDifficulty();
 
 
         long seed = LocalDate.now().toEpochDay();
