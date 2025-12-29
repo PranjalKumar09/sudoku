@@ -1,0 +1,7 @@
+npm create vite@latest
+cd frontend
+npm install
+npm run dev
+
+
+backend backend/.idea backend/.mvn backend/logs backend/src backend/target backend/.gitattributes backend/.gitignore backend/HELP.md backend/mvnw backend/mvnw.cmd backend/pom.xml frontend frontend/node_modules frontend/public frontend/public/vite.svg frontend/src frontend/src/api frontend/src/api/sudokuApi.js frontend/src/components frontend/src/components/SudokuCell.jsx frontend/src/components/SudokuGrid.jsx frontend/src/components/Timer.jsx frontend/src/pages frontend/src/pages/GamePage.jsx frontend/src/styles frontend/src/App.jsx frontend/src/index.css frontend/src/main.jsx frontend/.gitignore frontend/eslint.config.js frontend/index.html frontend/package-lock.json frontend/package.json frontend/postcss.config.js frontend/README.md frontend/tailwind.config.js frontend/vite.config.js
