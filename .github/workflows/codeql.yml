@@ -10,7 +10,6 @@ on:
 
 jobs:
   analyze:
-    name: Analyze
     runs-on: ubuntu-latest
 
     permissions:
@@ -32,8 +31,20 @@ jobs:
         with:
           languages: ${{ matrix.language }}
 
-      - name: Autobuild
-        uses: github/codeql-action/autobuild@v3
+      # 🔧 CUSTOM BUILD STEP (THIS IS THE FIX)
+      - name: Build backend (Java)
+        if: matrix.language == 'java'
+        run: |
+          cd backend
+          chmod +x mvnw
+          ./mvnw clean package -DskipTests
+
+      - name: Build frontend (JS)
+        if: matrix.language == 'javascript'
+        run: |
+          cd frontend
+          npm ci
+          npm run build
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
