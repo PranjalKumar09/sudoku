@@ -1,54 +1,18 @@
-2025-12-29 13:23:48.983 INFO  [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
-2025-12-29 13:23:49.032 INFO  [Thread-57] o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-12-29 13:23:49.073 INFO  [tomcat-shutdown] o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
-2025-12-29 13:23:49.088 INFO  [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-12-29 13:23:49.092 INFO  [Thread-57] o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
-2025-12-29 13:23:49.819 INFO  [restartedMain] com.backend.BackendApplication - Starting BackendApplication using Java 21.0.8 with PID 35644 (/mnt/NewVolume/code/sudoku/backend/target/classes started by pranjal in /mnt/NewVolume/code/sudoku/backend)
-2025-12-29 13:23:49.820 INFO  [restartedMain] com.backend.BackendApplication - No active profile set, falling back to 1 default profile: "default"
-2025-12-29 13:23:49.906 WARN  [restartedMain] o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure while processing configuration class [com.backend.BackendApplication]
-2025-12-29 13:23:50.018 ERROR [restartedMain] o.s.boot.SpringApplication - Application run failed
-org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure while processing configuration class [com.backend.BackendApplication]
-	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:288)
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:206)
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:174)
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:446)
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:310)
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:794)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:602)
-	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
-	at com.backend.BackendApplication.main(BackendApplication.java:10)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52)
-Caused by: java.io.FileNotFoundException: class path resource [com/backend/controller/SudokuController.class] cannot be opened because it does not exist
-	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:212)
-	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:54)
-	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48)
-	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:62)
-	at org.springframework.core.type.classreading.CachingMetadataReaderFactory.getMetadataReader(CachingMetadataReaderFactory.java:127)
-	at org.springframework.core.type.classreading.AbstractMetadataReaderFactory.getMetadataReader(AbstractMetadataReaderFactory.java:62)
-	at org.springframework.core.type.classreading.CachingMetadataReaderFactory.getMetadataReader(CachingMetadataReaderFactory.java:40)
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:218)
-	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:355)
-	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:283)
-	... 18 common frames omitted
-2025-12-29 13:23:51.573 INFO  [restartedMain] com.backend.BackendApplication - Starting BackendApplication using Java 21.0.8 with PID 35644 (/mnt/NewVolume/code/sudoku/backend/target/classes started by pranjal in /mnt/NewVolume/code/sudoku/backend)
-2025-12-29 13:23:51.574 INFO  [restartedMain] com.backend.BackendApplication - No active profile set, falling back to 1 default profile: "default"
-2025-12-29 13:23:52.776 INFO  [restartedMain] o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-12-29 13:23:52.796 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-12-29 13:23:52.798 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-12-29 13:23:52.799 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
-2025-12-29 13:23:52.831 INFO  [restartedMain] o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1253 ms
-2025-12-29 13:23:53.051 INFO  [restartedMain] o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-2025-12-29 13:23:53.542 INFO  [restartedMain] o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
-2025-12-29 13:23:53.586 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-12-29 13:23:53.594 INFO  [restartedMain] o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-12-29 13:23:53.604 INFO  [restartedMain] com.backend.BackendApplication - Started BackendApplication in 2.09 seconds (process running for 19760.996)
-2025-12-29 13:23:53.611 INFO  [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-12-29 14:03:46.512 INFO  [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-12-29 14:03:46.910 INFO  [Thread-61] o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-29 14:03:46.954 INFO  [tomcat-shutdown] o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-12-29 14:03:47.015 INFO  [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-12-29 14:03:47.028 INFO  [Thread-61] o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-12-29 14:03:49.735 INFO  [restartedMain] com.backend.BackendApplication - Starting BackendApplication using Java 21.0.8 with PID 35644 (/mnt/NewVolume/code/sudoku/backend/target/classes started by pranjal in /mnt/NewVolume/code/sudoku/backend)
+2025-12-29 14:03:49.735 INFO  [restartedMain] com.backend.BackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-29 14:03:51.150 INFO  [restartedMain] o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-29 14:03:51.156 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-12-29 14:03:51.157 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-29 14:03:51.157 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2025-12-29 14:03:51.204 INFO  [restartedMain] o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1458 ms
+2025-12-29 14:03:51.287 INFO  [restartedMain] o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-12-29 14:03:51.415 INFO  [restartedMain] o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-12-29 14:03:51.430 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-12-29 14:03:51.435 INFO  [restartedMain] o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-12-29 14:03:51.439 INFO  [restartedMain] com.backend.BackendApplication - Started BackendApplication in 2.071 seconds (process running for 22158.831)
+2025-12-29 14:03:51.441 INFO  [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
