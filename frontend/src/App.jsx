@@ -4,6 +4,7 @@ import { lazy, Suspense } from "react";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import AdBlockDetector from "./components/AdBlockDetector";
 
 // Lazy-loaded pages (SEO + performance friendly)
 const GamePage = lazy(() => import("./pages/GamePage"));
@@ -19,6 +20,7 @@ export default function App() {
       <Header />
 
       <ScrollToTop />
+      <AdBlockDetector />
 
       <main className="flex-grow">
         <Suspense fallback={<div className="text-center mt-10">Loading…</div>}>

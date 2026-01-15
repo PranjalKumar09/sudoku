@@ -1,19 +1,16 @@
 import { Link } from "react-router-dom";
+import AdUnit from "../AdUnit";
 
 export default function Footer() {
   return (
     <footer className="bg-gray-100 text-sm text-center py-6 mt-10">
-      
+
       {/* Footer Ad */}
       <div className="flex justify-center mb-4">
-        <ins
-          className="adsbygoogle"
+        <AdUnit
+          adSlot="4693927977"
           style={{ display: "block", width: "100%", maxWidth: "728px" }}
-          data-ad-client="ca-pub-8581322519667262"
-          data-ad-slot="4693927977"
-          data-ad-format="auto"
-          data-full-width-responsive="true"
-        ></ins>
+        />
       </div>
 
       <div className="flex justify-center gap-4 mb-2">

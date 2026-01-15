@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import AdUnit from "../AdUnit";
 
 export default function Header() {
   return (
@@ -18,14 +19,10 @@ export default function Header() {
 
       {/* Ad Slot (Header) */}
       <div className="bg-gray-800 py-2 flex justify-center">
-        <ins
-          className="adsbygoogle"
+        <AdUnit
+          adSlot="6078505299"
           style={{ display: "block", width: "100%", maxWidth: "728px" }}
-          data-ad-client="ca-pub-8581322519667262"
-          data-ad-slot="6078505299"
-          data-ad-format="auto"
-          data-full-width-responsive="true"
-        ></ins>
+        />
       </div>
     </header>
   );
