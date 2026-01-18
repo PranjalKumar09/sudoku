@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import SudokuGrid from "../components/SudokuGrid";
 import Timer from "../components/Timer";
+import Tutorial from "../components/Tutorial";
 
 import { useSudokuGame } from "../hooks/useSudokuGame";
 import { Helmet } from "react-helmet-async";
@@ -10,32 +11,33 @@ import { saveGame, loadSavedGame, clearGame } from "../utils/sudokuStorage";
 
 
 export default function GamePage({ mode = "normal", dailyDate }) {
-  
+
   const [difficulty, setDifficulty] = useState("easy");
+  const [showTutorial, setShowTutorial] = useState(false);
 
   const {
-  board,
-  initialBoard,
-  selected,
-  setSelected,
-  notes,
-  invalidCells,
-  pencilMode,
-  setPencilMode,
-  mistakes,
-  maxMistakes,
-  hintCount,
-  gameState,
-  setGameState,
-  loading,
-  shake,
-  shakeLevel,
-  solutionRef,
-  handleInput,
-  handleHint,
-  handleReset,
-  newGame,
-} = useSudokuGame({ mode, dailyDate, difficulty });
+    board,
+    initialBoard,
+    selected,
+    setSelected,
+    notes,
+    invalidCells,
+    pencilMode,
+    setPencilMode,
+    mistakes,
+    maxMistakes,
+    hintCount,
+    gameState,
+    setGameState,
+    loading,
+    shake,
+    shakeLevel,
+    solutionRef,
+    handleInput,
+    handleHint,
+    handleReset,
+    newGame,
+  } = useSudokuGame({ mode, dailyDate, difficulty });
 
   useEffect(() => {
     function handleKeyDown(e) {
@@ -50,8 +52,8 @@ export default function GamePage({ mode = "normal", dailyDate }) {
 
       // Clear cell
       if (e.key === "Backspace" || e.key === "Delete" || e.key === "0") {
-          handleInput(0);
-       
+        handleInput(0);
+
       }
 
       // Arrow navigation
@@ -69,16 +71,16 @@ export default function GamePage({ mode = "normal", dailyDate }) {
   }, [selected, gameState, handleInput]);
 
 
-useEffect(() => {
-  const storageKey = getStorageKey();
-  const saved = loadSavedGame(storageKey);
+  useEffect(() => {
+    const storageKey = getStorageKey();
+    const saved = loadSavedGame(storageKey);
 
-  if (saved) {
-    newGame(saved); // ✅ restore
-  } else {
-    newGame(); // ✅ fresh game
-  }
-}, [mode, difficulty]);
+    if (saved) {
+      newGame(saved); // ✅ restore
+    } else {
+      newGame(); // ✅ fresh game
+    }
+  }, [mode, difficulty]);
 
 
 
@@ -114,43 +116,42 @@ useEffect(() => {
   ]);
 
   function clamp(value, min, max) {
-  return Math.max(min, Math.min(max, value));
-}
-
-
-
-function getStorageKey() {
-  if (mode === "daily") {
-    return `sudoku:daily:${dailyDate}`;
+    return Math.max(min, Math.min(max, value));
   }
-  return `sudoku:normal:${difficulty}`;
-}
+
+
+
+  function getStorageKey() {
+    if (mode === "daily") {
+      return `sudoku:daily:${dailyDate}`;
+    }
+    return `sudoku:normal:${difficulty}`;
+  }
   if (loading) return <div>Loading...</div>;
 
   return (
 
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <Helmet>
-       
-    <meta
-      name="description"
-      content="Play free online Sudoku puzzles with daily challenges, hints, timer, notes, and 4 difficulty levels. Fast, clean, and mobile-friendly Sudoku game."
-    />
+
+        <meta
+          name="description"
+          content="Play free online Sudoku puzzles with daily challenges, hints, timer, notes, and 4 difficulty levels. Fast, clean, and mobile-friendly Sudoku game."
+        />
       </Helmet>
       <div className="bg-white p-6 rounded-xl shadow-lg w-fit ">
         <Timer paused={gameState !== "playing"} />
         <div className="flex justify-center gap-2 mb-3">
-  {[...Array(maxMistakes)].map((_, i) => (
-    <span
-      key={i}
-      className={`text-2xl ${
-        i < mistakes ? "text-red-500" : "text-gray-300"
-      }`}
-    >
-      ❌
-    </span>
-  ))}
-</div>
+          {[...Array(maxMistakes)].map((_, i) => (
+            <span
+              key={i}
+              className={`text-2xl ${i < mistakes ? "text-red-500" : "text-gray-300"
+                }`}
+            >
+              ❌
+            </span>
+          ))}
+        </div>
 
         {gameState === "won" && (
           <div className="mb-4 p-4 bg-green-100 border border-green-400 rounded text-center">
@@ -161,28 +162,28 @@ function getStorageKey() {
               Great job! You completed the Sudoku.
             </p>
             <button
-  onClick={() => window.open("https://forms.gle/NUkpFx1ZsGesNXBa7", "_blank")}
-  className="px-4 py-2 bg-gray-900 text-white rounded"
->
-  💬 Give Feedback
-</button>
+              onClick={() => window.open("https://forms.gle/NUkpFx1ZsGesNXBa7", "_blank")}
+              className="px-4 py-2 bg-gray-900 text-white rounded"
+            >
+              💬 Give Feedback
+            </button>
           </div>
         )}
         {gameState === "lost" && (
-  <div className="mb-4 p-4 bg-red-100 border border-red-400 rounded text-center">
-    <h2 className="text-2xl font-bold text-red-700">💥 Game Over</h2>
-    <p className="text-red-600 mt-1">
-      You made {maxMistakes} mistakes.
-    </p>
-    <button
-  onClick={() => window.open("https://forms.gle/NUkpFx1ZsGesNXBa7", "_blank")}
-  className="px-4 py-2 bg-gray-900 text-white rounded"
->
-  💬 Give Feedback
-</button>
+          <div className="mb-4 p-4 bg-red-100 border border-red-400 rounded text-center">
+            <h2 className="text-2xl font-bold text-red-700">💥 Game Over</h2>
+            <p className="text-red-600 mt-1">
+              You made {maxMistakes} mistakes.
+            </p>
+            <button
+              onClick={() => window.open("https://forms.gle/NUkpFx1ZsGesNXBa7", "_blank")}
+              className="px-4 py-2 bg-gray-900 text-white rounded"
+            >
+              💬 Give Feedback
+            </button>
 
-  </div>
-)}
+          </div>
+        )}
 
 
         <div className="flex gap-3 justify-center mb-4">
@@ -215,17 +216,27 @@ function getStorageKey() {
           >
             {gameState === "paused" ? "▶ Resume" : "⏸ Pause"}
           </button>
+
+          <button
+            onClick={() => setShowTutorial(true)}
+            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+          >
+            📚 Tutorial
+          </button>
         </div>
 
+        {/* Tutorial Component */}
+        {showTutorial && <Tutorial onComplete={() => setShowTutorial(false)} />}
+
         <div
-  className={`
+          className={`
     ${gameState !== "playing" ? "blur-sm pointer-events-none" : ""}
     ${shake ? "shake" : ""}
   `}
-    style={{
-    "--shake-power": Math.min(shakeLevel, 4)
-  }}
->
+          style={{
+            "--shake-power": Math.min(shakeLevel, 4)
+          }}
+        >
 
           <SudokuGrid
             board={board}
@@ -242,14 +253,13 @@ function getStorageKey() {
           {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((n) => (
             <button
               key={n}
-           aria-label={`Enter number ${n}`}
+              aria-label={`Enter number ${n}`}
               onClick={() => handleInput(n)}
               disabled={gameState === "paused"}
-              className={`w-10 h-10 rounded ${
-                gameState === "paused"
-                  ? "bg-gray-300 cursor-not-allowed"
-                  : "bg-gray-200 hover:bg-gray-300"
-              }`}
+              className={`w-10 h-10 rounded ${gameState === "paused"
+                ? "bg-gray-300 cursor-not-allowed"
+                : "bg-gray-200 hover:bg-gray-300"
+                }`}
             >
               {n}
             </button>
@@ -259,9 +269,8 @@ function getStorageKey() {
         <div className="flex gap-4 mt-4 justify-center">
           <button
             onClick={() => setPencilMode(!pencilMode)}
-            className={`px-4 py-2 rounded ${
-              pencilMode ? "bg-blue-500 text-white" : "bg-gray-200"
-            }`}
+            className={`px-4 py-2 rounded ${pencilMode ? "bg-blue-500 text-white" : "bg-gray-200"
+              }`}
           >
             ✏ Pencil
           </button>
@@ -269,9 +278,8 @@ function getStorageKey() {
           <button
             onClick={handleHint}
             disabled={hintCount >= 3}
-            className={`px-4 py-2 rounded text-white ${
-              hintCount >= 3 ? "bg-gray-400 cursor-not-allowed" : "bg-green-500"
-            }`}
+            className={`px-4 py-2 rounded text-white ${hintCount >= 3 ? "bg-gray-400 cursor-not-allowed" : "bg-green-500"
+              }`}
           >
             💡 Hint ({3 - hintCount})
           </button>
@@ -282,17 +290,17 @@ function getStorageKey() {
           >
             🔄 Reset
           </button>
-          
+
         </div>
         <p id="sudoku-game-instructions" className="sr-only">
-  This is an interactive Sudoku puzzle. Use the keyboard or on-screen
-  number buttons to fill the grid. You can pause the timer, use hints,
-  enable pencil mode, or reset the puzzle at any time.
-</p>
+          This is an interactive Sudoku puzzle. Use the keyboard or on-screen
+          number buttons to fill the grid. You can pause the timer, use hints,
+          enable pencil mode, or reset the puzzle at any time.
+        </p>
 
-        
+
       </div>
-      
+
     </div>
   );
 }
